@@ -1,0 +1,64 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  height: 100vh;
+}
+button {
+  padding: 1rem 2rem;
+  height: 4rem;
+  width: 15rem;
+  font-size: 2rem;
+  font-family: monospace;
+  border-radius: 4rem;
+  border: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background: rgb(188, 185, 185);
+}
+button::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 4rem;
+  transform: scale(1.03, 1.09);
+
+  background-image: linear-gradient(to bottom right, red, blue);
+  z-index: -1;
+  animation: border-grad 1s ease infinite;
+}
+
+@keyframes border-grad {
+  0% {
+    background-image: linear-gradient(to bottom right, red, blue);
+  }
+  12.5% {
+    background-image: linear-gradient(to right, red, blue);
+  }
+  25% {
+    background-image: linear-gradient(to top right, red, blue);
+  }
+  37.5% {
+    background-image: linear-gradient(to top, red, blue);
+  }
+  50% {
+    background-image: linear-gradient(to top left, red, blue);
+  }
+  62.5% {
+    background-image: linear-gradient(to left, red, blue);
+  }
+  75% {
+    background-image: linear-gradient(to bottom left, red, blue);
+  }
+  87.5% {
+    background-image: linear-gradient(to bottom, red, blue);
+  }
+  100% {
+    background-image: linear-gradient(to bottom right, red, blue);
+  }
+}
